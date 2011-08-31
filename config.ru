@@ -1,5 +1,7 @@
-require 'sinatra'
+require 'rubygems'
+require 'bundler'
 
-get '/hi' do
-  "Hello World!"
-end
+Bundler.require
+
+require './app'
+run Sinatra::Application
